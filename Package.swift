@@ -44,7 +44,8 @@ var targets: [PackageDescription.Target] = [
             .product(name: "SwiftSyntax", package: "swift-syntax"),
             .product(name: "SwiftSyntaxParser", package: "swift-syntax"),
             .product(name: "SwiftIndexStore", package: "swift-indexstore")
-        ]
+        ],
+        swiftSettings: [.unsafeFlags(["-enable-testing"])]
     ),
     .target(
         name: "Shared",
@@ -53,70 +54,70 @@ var targets: [PackageDescription.Target] = [
             .product(name: "SystemPackage", package: "swift-system")
         ]
     ),
-//    .target(
-//        name: "TestShared",
-//        dependencies: [
-//            .target(name: "PeripheryKit")
-//        ],
-//        path: "Tests/Shared"
-//    ),
-//    .target(
-//        name: "ExternalModuleFixtures",
-//        path: "Tests/Fixtures/ExternalModuleFixtures"
-//    ),
-//    .target(
-//        name: "CrossModuleRetentionFixtures",
-//        dependencies: [
-//            .target(name: "CrossModuleRetentionSupportFixtures")
-//        ],
-//        path: "Tests/Fixtures/CrossModuleRetentionFixtures"
-//    ),
-//    .target(
-//        name: "CrossModuleRetentionSupportFixtures",
-//        path: "Tests/Fixtures/CrossModuleRetentionSupportFixtures"
-//    ),
-//    .target(
-//        name: "RetentionFixtures",
-//        dependencies: [
-//            .target(name: "ExternalModuleFixtures")
-//        ],
-//        path: "Tests/Fixtures/RetentionFixtures"
-//    ),
-//    .target(
-//        name: "UnusedParameterFixtures",
-//        path: "Tests/Fixtures/UnusedParameterFixtures"
-//    ),
-//    .target(
-//        name: "TypeSyntaxInspectorFixtures",
-//        path: "Tests/Fixtures/TypeSyntaxInspectorFixtures"
-//    ),
-//    .target(
-//        name: "DeclarationVisitorFixtures",
-//        path: "Tests/Fixtures/DeclarationVisitorFixtures"
-//    ),
-//    .testTarget(
-//        name: "PeripheryTests",
-//        dependencies: [
-//            .target(name: "TestShared"),
-//            .target(name: "PeripheryKit")
-//        ]
-//    ),
-//    .testTarget(
-//        name: "SPMTests",
-//        dependencies: [
-//            .target(name: "TestShared"),
-//            .target(name: "PeripheryKit")
-//        ],
-//        exclude: ["SPMProject"]
-//    ),
-//    .testTarget(
-//        name: "AccessibilityTests",
-//        dependencies: [
-//            .target(name: "TestShared"),
-//            .target(name: "PeripheryKit")
-//        ],
-//        exclude: ["AccessibilityProject"]
-//    )
+    .target(
+        name: "TestShared",
+        dependencies: [
+            .target(name: "PeripheryKit")
+        ],
+        path: "Tests/Shared"
+    ),
+    .target(
+        name: "ExternalModuleFixtures",
+        path: "Tests/Fixtures/ExternalModuleFixtures"
+    ),
+    .target(
+        name: "CrossModuleRetentionFixtures",
+        dependencies: [
+            .target(name: "CrossModuleRetentionSupportFixtures")
+        ],
+        path: "Tests/Fixtures/CrossModuleRetentionFixtures"
+    ),
+    .target(
+        name: "CrossModuleRetentionSupportFixtures",
+        path: "Tests/Fixtures/CrossModuleRetentionSupportFixtures"
+    ),
+    .target(
+        name: "RetentionFixtures",
+        dependencies: [
+            .target(name: "ExternalModuleFixtures")
+        ],
+        path: "Tests/Fixtures/RetentionFixtures"
+    ),
+    .target(
+        name: "UnusedParameterFixtures",
+        path: "Tests/Fixtures/UnusedParameterFixtures"
+    ),
+    .target(
+        name: "TypeSyntaxInspectorFixtures",
+        path: "Tests/Fixtures/TypeSyntaxInspectorFixtures"
+    ),
+    .target(
+        name: "DeclarationVisitorFixtures",
+        path: "Tests/Fixtures/DeclarationVisitorFixtures"
+    ),
+    .testTarget(
+        name: "PeripheryTests",
+        dependencies: [
+            .target(name: "TestShared"),
+            .target(name: "PeripheryKit")
+        ]
+    ),
+    .testTarget(
+        name: "SPMTests",
+        dependencies: [
+            .target(name: "TestShared"),
+            .target(name: "PeripheryKit")
+        ],
+        exclude: ["SPMProject"]
+    ),
+    .testTarget(
+        name: "AccessibilityTests",
+        dependencies: [
+            .target(name: "TestShared"),
+            .target(name: "PeripheryKit")
+        ],
+        exclude: ["AccessibilityProject"]
+    )
 ]
 
 #if os(macOS)
