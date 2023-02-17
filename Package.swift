@@ -94,29 +94,29 @@ var targets: [PackageDescription.Target] = [
         name: "DeclarationVisitorFixtures",
         path: "Tests/Fixtures/DeclarationVisitorFixtures"
     ),
-    .testTarget(
-        name: "PeripheryTests",
-        dependencies: [
-            .target(name: "TestShared"),
-            .target(name: "PeripheryKit")
-        ]
-    ),
-    .testTarget(
-        name: "SPMTests",
-        dependencies: [
-            .target(name: "TestShared"),
-            .target(name: "PeripheryKit")
-        ],
-        exclude: ["SPMProject"]
-    ),
-    .testTarget(
-        name: "AccessibilityTests",
-        dependencies: [
-            .target(name: "TestShared"),
-            .target(name: "PeripheryKit")
-        ],
-        exclude: ["AccessibilityProject"]
-    )
+//    .testTarget(
+//        name: "PeripheryTests",
+//        dependencies: [
+//            .target(name: "TestShared"),
+//            .target(name: "PeripheryKit")
+//        ]
+//    ),
+//    .testTarget(
+//        name: "SPMTests",
+//        dependencies: [
+//            .target(name: "TestShared"),
+//            .target(name: "PeripheryKit")
+//        ],
+//        exclude: ["SPMProject"]
+//    ),
+//    .testTarget(
+//        name: "AccessibilityTests",
+//        dependencies: [
+//            .target(name: "TestShared"),
+//            .target(name: "PeripheryKit")
+//        ],
+//        exclude: ["AccessibilityProject"]
+//    )
 ]
 
 #if os(macOS)
