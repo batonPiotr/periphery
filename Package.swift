@@ -53,47 +53,47 @@ var targets: [PackageDescription.Target] = [
             .product(name: "SystemPackage", package: "swift-system")
         ]
     ),
-    .target(
-        name: "TestShared",
-        dependencies: [
-            .target(name: "PeripheryKit")
-        ],
-        path: "Tests/Shared"
-    ),
-    .target(
-        name: "ExternalModuleFixtures",
-        path: "Tests/Fixtures/ExternalModuleFixtures"
-    ),
-    .target(
-        name: "CrossModuleRetentionFixtures",
-        dependencies: [
-            .target(name: "CrossModuleRetentionSupportFixtures")
-        ],
-        path: "Tests/Fixtures/CrossModuleRetentionFixtures"
-    ),
-    .target(
-        name: "CrossModuleRetentionSupportFixtures",
-        path: "Tests/Fixtures/CrossModuleRetentionSupportFixtures"
-    ),
-    .target(
-        name: "RetentionFixtures",
-        dependencies: [
-            .target(name: "ExternalModuleFixtures")
-        ],
-        path: "Tests/Fixtures/RetentionFixtures"
-    ),
-    .target(
-        name: "UnusedParameterFixtures",
-        path: "Tests/Fixtures/UnusedParameterFixtures"
-    ),
-    .target(
-        name: "TypeSyntaxInspectorFixtures",
-        path: "Tests/Fixtures/TypeSyntaxInspectorFixtures"
-    ),
-    .target(
-        name: "DeclarationVisitorFixtures",
-        path: "Tests/Fixtures/DeclarationVisitorFixtures"
-    ),
+//    .target(
+//        name: "TestShared",
+//        dependencies: [
+//            .target(name: "PeripheryKit")
+//        ],
+//        path: "Tests/Shared"
+//    ),
+//    .target(
+//        name: "ExternalModuleFixtures",
+//        path: "Tests/Fixtures/ExternalModuleFixtures"
+//    ),
+//    .target(
+//        name: "CrossModuleRetentionFixtures",
+//        dependencies: [
+//            .target(name: "CrossModuleRetentionSupportFixtures")
+//        ],
+//        path: "Tests/Fixtures/CrossModuleRetentionFixtures"
+//    ),
+//    .target(
+//        name: "CrossModuleRetentionSupportFixtures",
+//        path: "Tests/Fixtures/CrossModuleRetentionSupportFixtures"
+//    ),
+//    .target(
+//        name: "RetentionFixtures",
+//        dependencies: [
+//            .target(name: "ExternalModuleFixtures")
+//        ],
+//        path: "Tests/Fixtures/RetentionFixtures"
+//    ),
+//    .target(
+//        name: "UnusedParameterFixtures",
+//        path: "Tests/Fixtures/UnusedParameterFixtures"
+//    ),
+//    .target(
+//        name: "TypeSyntaxInspectorFixtures",
+//        path: "Tests/Fixtures/TypeSyntaxInspectorFixtures"
+//    ),
+//    .target(
+//        name: "DeclarationVisitorFixtures",
+//        path: "Tests/Fixtures/DeclarationVisitorFixtures"
+//    ),
 //    .testTarget(
 //        name: "PeripheryTests",
 //        dependencies: [
